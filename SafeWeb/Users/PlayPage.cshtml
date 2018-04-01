@@ -1,0 +1,52 @@
+﻿@{ 
+    if(!WebSecurity.IsAuthenticated)
+    {
+        Response.Redirect("~/Account/Login?returnUrl="
+            + Request.Url.LocalPath);
+    }
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Play Page";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Play Page</title>
+    </head>
+    <body>
+        <h1>Welcome to the Play Page</h1>
+        <p>Have a go at finding and interacting with the elements below!</p>
+        <h3>Try typing your name into this text box and click on the <b>submit</b> button</h3><br />
+        <input id="name" type="text" />
+        <button id="submit">Submit</button>
+        <h3>And try finding the text in the alert box that pops up</h3><br /><br />
+        <script type="text/javascript">
+            (function () {
+                "use strict";
+                var $input = document.getElementById("name");
+                var $btn = document.getElementById("submit");
+                $btn.addEventListener("click", function (event) {
+                    if (!$input.value) {
+                        return alert("Please provide your name.");
+                    }
+                    return alert("Hello " + $input.value + " welcome to the course!");
+                });
+            })();
+        </script>
+        <h3>Try selecting this checkbox and then confirming it's selected</h3>
+        <p> </p>
+        <input id="Checkbox1" type="checkbox" /><br />
+        <h3>Try clicking on one of the radio buttons and then confirming it's selected</h3><br />
+        <input id="Radio1" type="radio" />
+        <input id="Radio2" type="radio" /><br />
+        <h3>Try typing something into this Text Area</h3><br />
+        <textarea id="TextArea1" rows="2" cols="20"></textarea><br />
+        <h3>Try selecting something from this select box</h3><br />
+        <select id="Select1">
+            <option>automation</option>
+            <option>is</option>
+            <option>great</option>
+        </select>
+    </body>
+</html>

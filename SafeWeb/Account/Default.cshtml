@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/_SiteLayout.cshtml";
+    Page.Title = "Home Page";
+}
+
+@section featured {
+<section class="featured">
+    <div class="content-wrapper">
+        <hgroup class="title">
+            <h1>@Page.Title.</h1>
+            <h2>Welcome to the Safebear Test Automation Website.</h2>
+        </hgroup>
+        <p>
+            This is the <strong>Home Page</strong>. 
+            This website is designed to help you practice your Test Automation skills
+            after taking part in the Crash Course in Test Automation in CSharp. 
+            Please have a play. If you have any questions, or wish to view any follow-on
+            courses, please see 
+            <a href="http://safebear.co.uk/">our website</a> 
+            for details.
+        </p>
+    </div>
+</section>
+}
+
+<h3>On this course your will learn:</h3>
+
+<ol class="round">
+    <li class="one">
+        <h5>Getting Started</h5>
+        You will learn how to use an IDE (Integrated Development Environment) to create your tests. 
+        You will learn how to How to version your tests in Code Control.
+        And how to create your project framework.
+    </li>
+
+    <li class="two">
+        <h5>Page Objects</h5>
+        You will learn the basics of Object-Orientated programming and how it is used to describe your web page.
+    </li>
+
+    <li class="three">
+        <h5>Interacting with the Page</h5>
+        You will learn how to use Selenium to navigate around the website, to identify objects on the page and
+        to interact with them.
+    </li>
+</ol>

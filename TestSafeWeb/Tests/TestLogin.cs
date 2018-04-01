@@ -4,11 +4,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace TestSafeWeb
 {
     [TestClass]
-    public class UnitTest1
+    public class TestLogin
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestLogin01()
         {
+            Assert.IsTrue(true);
         }
     }
 }
