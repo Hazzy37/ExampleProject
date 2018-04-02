@@ -24,9 +24,9 @@ namespace TestSafeWeb.Tests
             param = new Parameters();
 
             //Set Driver variable from Parameters Get Driver method
-            //this.driver = param.GetDriver();
+            this.driver = param.GetDriver();
             // ---- And Headless version
-            this.driver = param.GetHeadlessDriver();
+            //this.driver = param.GetHeadlessDriver();
 
             // the this.driver needs to be added prior to these next 3 lines else driver not recognised
             homepage = new HomePage(driver);

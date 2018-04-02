@@ -10,9 +10,10 @@ namespace TestSafeWeb.Utils
         //private String url = "http://localhost:50454/";
 
         //Below commented out as running in headless mode.        
-        //private IWebDriver driver = new ChromeDriver();
+        private IWebDriver driver = new ChromeDriver();
 
-        private IWebDriver driver;
+        //Below line can be used instead of above to execute headless test run
+        //private IWebDriver driver;
 
         public String GetUrl()
         {
@@ -39,18 +40,18 @@ namespace TestSafeWeb.Utils
         public IWebDriver GetDriver()
         {
             //below line added for headless mode
-            driver = new ChromeDriver();
+            //driver = new ChromeDriver();
 
             return driver;
         }
 
         //Below method added just for the headless mode
-        public IWebDriver GetHeadlessDriver()
-        {
-            ChromeOptions options = new ChromeOptions();
-            options.AddArgument("--headless");
-            driver = new ChromeDriver(options);
-            return driver;
-        }
+        //public IWebDriver GetHeadlessDriver()
+        //{
+        //    ChromeOptions options = new ChromeOptions();
+        //    options.AddArgument("--headless");
+        //    driver = new ChromeDriver(options);
+        //    return driver;
+        //}
     }
 }
