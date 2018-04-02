@@ -15,6 +15,9 @@ namespace TestSafeWeb
 
             //Step 1 : Check on Home Page
             Assert.IsTrue(homepage.CheckPage());
+
+            //Step 2 : Click on Login to get to Login page
+            Assert.IsTrue(homepage.ClickLogin(loginpage));
         }
     }
 }

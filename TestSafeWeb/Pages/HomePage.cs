@@ -9,6 +9,10 @@ namespace TestSafeWeb.Pages
         //this is the driver variable where we use ChromeDriver
         private IWebDriver driver;
 
+        //Find login link using link text
+        [FindsBy(How = How.LinkText, Using = "Log in")]
+        private IWebElement link_login;
+
         //This is the HomePage constructor
         public HomePage(IWebDriver driver)
         {
@@ -20,6 +24,13 @@ namespace TestSafeWeb.Pages
         public Boolean CheckPage()
         {
             return driver.Title.Contains("Home");
+        }
+
+        //method to click login link
+        public Boolean ClickLogin(LoginPage loginpage)
+        {
+            link_login.Click();
+            return loginpage.CheckPage();
         }
     }
 }
