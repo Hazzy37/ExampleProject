@@ -4,6 +4,9 @@ using TestSafeWeb.Tests;
 
 namespace TestSafeWeb
 {
+    /// <summary>
+    /// These are the steps run the main body of the test 
+    /// </summary>
     [TestClass]
     public class TestLogin:BaseTest
     {
@@ -18,6 +21,9 @@ namespace TestSafeWeb
 
             //Step 2 : Click on Login to get to Login page
             Assert.IsTrue(homepage.ClickLogin(loginpage));
+
+            //Step 3 : Login and confirm homepage is displayed
+            Assert.IsTrue(loginpage.Login(homepage, "student@safebear.co.uk", "tester1"));
         }
     }
 }
