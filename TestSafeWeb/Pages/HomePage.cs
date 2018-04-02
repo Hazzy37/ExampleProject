@@ -13,6 +13,10 @@ namespace TestSafeWeb.Pages
         [FindsBy(How = How.LinkText, Using = "Log in")]
         private IWebElement link_login;
 
+        //Finding the Play button
+        [FindsBy(How = How.LinkText, Using = "Play")]
+        private IWebElement link_play;
+
         //This is the HomePage constructor
         public HomePage(IWebDriver driver)
         {
@@ -31,6 +35,13 @@ namespace TestSafeWeb.Pages
         {
             link_login.Click();
             return loginpage.CheckPage();
+        }
+
+        //method to click Play link
+        public Boolean ClickPlay(PlayPage playpage)
+        {
+            link_play.Click();
+            return playpage.CheckPage();
         }
     }
 }

@@ -21,5 +21,6 @@ namespace TestSafeWeb.Pages
         {
             return driver.Title.Contains("Play Page");
         }
+        
     }
 }
