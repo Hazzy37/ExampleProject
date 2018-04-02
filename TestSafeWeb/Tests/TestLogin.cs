@@ -10,7 +10,11 @@ namespace TestSafeWeb
         [TestMethod]
         public void TestLogin01()
         {
-            Assert.IsTrue(true);
+            //Initial test below
+            //Assert.IsTrue(true);
+
+            //Step 1 : Check on Home Page
+            Assert.IsTrue(homepage.CheckPage());
         }
     }
 }
