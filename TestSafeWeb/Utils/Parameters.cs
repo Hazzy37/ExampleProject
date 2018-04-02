@@ -14,10 +14,10 @@ namespace TestSafeWeb.Utils
         //private String url = "http://localhost:50454/";
         private IWebDriver driver = new ChromeDriver();
 
-        //public String GetUrl()
-        //{
-        //    return url;
-        //}
+        public String GetUrl()
+        {
+            return url;
+        }
 
 
         public String url { get; set; } = "http://localhost:50454/";
