@@ -23,7 +23,8 @@ namespace TestSafeWeb
             Assert.IsTrue(homepage.ClickLogin(loginpage));
 
             //Step 3 : Login and confirm homepage is displayed
-            Assert.IsTrue(loginpage.Login(homepage, "student@safebear.co.uk", "tester1"));
+            //Assert.IsTrue(loginpage.Login(homepage, "student@safebear.co.uk", "tester1"));
+            Assert.IsTrue(loginpage.Login(homepage, param.GetEmail(), param.GetPassword()));                
 
             //Step 4 : Click on the Play link and access Play Page
             Assert.IsTrue(homepage.ClickPlay(playpage));

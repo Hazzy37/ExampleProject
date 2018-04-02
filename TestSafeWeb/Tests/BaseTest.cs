@@ -15,7 +15,7 @@ namespace TestSafeWeb.Tests
         protected HomePage homepage;
         protected LoginPage loginpage;
         protected PlayPage playpage;
-
+        
 
         [TestInitialize]
         public void SetUp()
@@ -23,16 +23,16 @@ namespace TestSafeWeb.Tests
             //Set Variable of Type Class Parameters
             param = new Parameters();
 
-            //Set Driver variable from Paraters Get Driver method
-            this.driver = param.GetDriver();
+            //Set Driver variable from Parameters Get Driver method
+            //this.driver = param.GetDriver();
+            // ---- And Headless version
+            this.driver = param.GetHeadlessDriver();
 
             // the this.driver needs to be added prior to these next 3 lines else driver not recognised
             homepage = new HomePage(driver);
             loginpage = new LoginPage(driver);
             playpage = new PlayPage(driver);
-
             
-
             //Set a Wait Period 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5.00);
 
