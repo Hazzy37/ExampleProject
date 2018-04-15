@@ -30,5 +30,27 @@ namespace TestSafeWeb
             Assert.IsTrue(homepage.ClickPlay(playpage));
 
         }
+
+        [TestMethod]
+        public void TestMultiElements01()
+        {
+            // Step 1: check that we are on the homepage
+            Assert.IsTrue(homepage.CheckPage());
+            //Step 2 : click on Login Link to get to Login Home Page
+            Assert.IsTrue(homepage.ClickLogin(loginpage));
+            //Step 3 : sent the same text to the login and password fields
+            Assert.IsTrue(loginpage.MultiElements(homepage, "student@safebear.co.uk", "tester1"));
+        }
+        
+        // below won't work. Needs to add access play page etc
+        // Need to add the login stage
+        [TestMethod]
+        public void GoToPlayPage()
+        {
+            driver.Navigate().GoToUrl("http://localhost:50454/Account/Login");            
+            //Step 4 : Click on the Play link and access Play Page
+            Assert.IsTrue(homepage.ClickPlay(playpage));
+        }
+        
     }
 }
