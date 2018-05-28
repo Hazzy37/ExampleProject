@@ -42,7 +42,7 @@ namespace TestSafeWeb.Pages
 
         }
 
-        //This is where we use the liest we created earlier to log in
+        //This is where we use the list we created earlier to log in
         // Each element in the list is identified by an index
         public Boolean MultiElements(HomePage homepage, String email, String password)
         {
